@@ -1,8 +1,12 @@
+:root {
+  --general-text-color: #dadada;
+}
+
 html {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   background-color: #121212;
-  color: #dadada;
+  color: var(--general-text-color);
   scroll-behavior: smooth;
 }
 
@@ -15,7 +19,30 @@ html {
 
 a {
   text-decoration: none;
-  color: #dadada;
+  color: var(--general-text-color);
+}
+
+html {
+  scrollbar-width: auto;
+  scrollbar-color: #9e9e9e #121212;
+}
+
+html::-webkit-scrollbar {
+  width: 16px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #9e9e9e;
+  border-radius: 10px;
+  border: 3px solid #121212;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #9e9e9ead;
 }
 
 /** NAVBAR ======================================> */
@@ -30,23 +57,21 @@ a {
   padding-top: 3.5rem;
 }
 
-.github-link,
 .project-link {
   text-align: center;
-  padding-left: 0.5rem;
+  padding: 0.5rem;
 }
 
-.github-link:hover,
 .project-link:hover {
   color: #222222;
-  background-color: #fafafa;
+  background-color: var(--general-text-color);
 }
 
 .hr {
   width: 0.1rem;
   height: 1rem;
   margin: 1rem;
-  background-color: cornflowerblue;
+  background-color: #6495ed;
 }
 
 /** NAVBAR ======================================> */
@@ -63,7 +88,7 @@ h1 {
   z-index: 800;
   position: absolute;
   text-align: center;
-  color: #fff;
+  color: var(--general-text-color);
   text-transform: uppercase;
   margin: 1rem;
 }
@@ -118,34 +143,6 @@ h1 {
 .project-3:hover,
 .project-4:hover {
   background-color: #6494ed77;
-}
-
-@media (min-width: 640px) {
-  /* .header-nav-bar {
-    z-index: 900;
-    position: fixed;
-    top: 0;
-    width: 9rem;
-  }
-  
-  #navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  
-  #navbar a {
-    text-align: right;
-    padding-top: 2rem;
-    width: 9rem;
-    border-bottom: thin solid #fafafa;
-    transition: all 300ms ease;
-  }
-  
-  #navbar a:hover {
-    color: #6495ed;
-    border-bottom: thin solid #6495ed;
-  } */
 }
 
 @media (min-width: 768px) {
