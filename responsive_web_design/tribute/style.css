@@ -361,43 +361,41 @@ hr {
 */
 
 footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background-image: url(assets/footer_bk.png);
   background-attachment: fixed;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
   width: 100%;
-  align-items: center;
   height: 7rem;
   background-color: #181818;
 }
 
 footer a {
-  color: #fff;
-}
-
-.twitter,
-.youtube,
-.social-network {
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
   gap: 0.5rem;
-  font-weight: 600;
-  text-align: center;
   color: #fff;
-  transition: color 400ms ease;
 }
 
-.social-network:hover {
-  color: var(--link-color);
-  transition: color 300ms ease;
+footer a:hover {
+  background-color: #b623964d;
 }
 
-.social-network img {
-  width: 1.5rem;
-  height: auto;
+footer a img {
+  position: relative;
+  bottom: 0;
+  height: 2rem;  
+  transition: bottom 300ms ease;
+}
+
+footer a img:hover {
+  bottom: 0.5rem;
+  transition: bottom 300ms ease;
 }
 
 @keyframes jojo-logo {
@@ -416,7 +414,7 @@ footer a {
 .go-up img {
   z-index: 800;
   position: fixed;
-  bottom: 5rem;
+  bottom: 6rem;
   right: 2rem;
   transform: scale(1.2);
 }
@@ -445,7 +443,7 @@ footer a {
   }
 
   footer {
-    gap: 2rem;
+    /* gap: 1rem; */
   }
 
   .twitter {
