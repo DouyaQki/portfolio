@@ -2,19 +2,11 @@
   --link-color: #b62396;
 }
 
-/*
-=====================
-*===== SCROLLBAR
-=====================
-*/
-
-/* Firefox */
 html {
   scrollbar-width: auto;
   scrollbar-color: #aaaaaa #181818;
 }
 
-/* Chrome, Edge, and Safari */
 html::-webkit-scrollbar {
   width: 16px;
 }
@@ -32,12 +24,6 @@ html::-webkit-scrollbar-thumb {
 html::-webkit-scrollbar-thumb:hover {
   background-color: #aaaaaa7a;
 }
-
-/*
-=====================
-*===== RESET HTML
-=====================
-*/
 
 html {
   box-sizing: border-box;

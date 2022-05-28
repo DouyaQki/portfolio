@@ -65,7 +65,7 @@ code {
   font-size: 1rem;
   border-radius: 0.2rem;
   padding: 0.5rem;
-  color: #fafafa;
+  color: var(--white-color);
   background-color: #413d79;
 }
 
@@ -94,15 +94,22 @@ code {
 }
 
 .close-menu {
+  display: flex;
+  justify-content: flex-end;
   padding: 1rem;
-  text-align: right;
   font-weight: 600;
 }
 
 .close-menu a {
-  display: inline-block;
-  font-size: 1.8rem;
-  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 2rem;
+  height: 2rem;
+  border: thin solid var(--white-color);
+  border-radius: 50%;
+  font-weight: 600;
 }
 
 .navbar-header a {
@@ -214,6 +221,10 @@ code {
 
 li {
   margin-left: 0;
+}
+
+#SPRITES_ON_SCREEN {
+  margin-bottom: 10rem;
 }
 
 @media (min-width: 768px) {
