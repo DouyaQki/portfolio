@@ -76,6 +76,7 @@ body {
 
 .nav-bar-based-on {
   display: none;
+  user-select: none;
 }
 
 /** MAIN ========================================> */
@@ -99,11 +100,13 @@ main {
   text-transform: uppercase;
   font-weight: 200;
   color: gray;
+  user-select: none;
 }
 
 h1 {
   font-size: 2rem;
   text-transform: uppercase;
+  user-select: none;
 }
 
 .title-and-cv {

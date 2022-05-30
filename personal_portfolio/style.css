@@ -2,6 +2,8 @@
   --nav-bar-height: 4rem;
   --nav-bar-gap: 1.5rem;
   --screen-nav-bar-min-width: 23rem;
+  --nav-bar-background-color: #fafafa;
+  --body-background-color: #ebe9e9;
 }
 
 html {
@@ -31,6 +33,7 @@ a {
 
 body {
   background-color: #ebe9e9;
+  transition: all 300ms ease;
 }
 
 /** NAV-BAR ===============================> */
@@ -42,6 +45,8 @@ body {
   min-height: var(--nav-bar-height);
   padding: 0 var(--nav-bar-gap);
   background-color: #fafafa;
+  user-select: none;
+  transition: all 300ms ease;
 }
 
 .logo-links-and-based-on-box {
@@ -100,7 +105,7 @@ main {
 }
 
 .profile img {
-  border: 0.4rem solid cornflowerblue;
+  border: 0.4rem solid #6495ed;
   border-radius: 50%;
   max-height: 100%;
 }
@@ -125,6 +130,7 @@ h2 {
   color: gray;
   line-height: 2;
   width: 80%;
+  transition: all 300ms ease;
 }
 
 .social {
@@ -198,7 +204,7 @@ h2 {
     display: flex;
   }
 
-/** NAV-BAR ===============================> */
+  /** NAV-BAR ===============================> */
 
   .nav-bar {
     display: flex;
@@ -223,6 +229,7 @@ h2 {
   .nav-bar-links {
     flex-direction: column;
     align-items: flex-start;
+    transition: all 300ms ease;
   }
 
   .nav-bar-links a {
@@ -230,10 +237,9 @@ h2 {
     align-items: center;
   }
 
-  .home,
-  .about,
-  .projects,
-  .contact {
+  .after-text {
+    color: #000;
+    font-weight: 400;
     transition: all 300ms ease;
   }
 
@@ -262,22 +268,21 @@ h2 {
   .projects:hover,
   .contact:hover {
     font-weight: 600;
-    color: cornflowerblue;
+    color: #6495ed;
   }
 
   .nav-bar-based-on {
     display: block;
     font-style: italic;
-    color: gray;
+    color: #808080;
     margin-top: 2rem;
   }
 
   .nav-bar-based-on a {
-    color: cornflowerblue;
+    color: #6495ed;
   }
 
-/** MAIN ===============================> */
-
+  /** MAIN ===============================> */
 
   main {
     height: 20rem;
@@ -295,4 +300,52 @@ h2 {
     justify-content: center;
     height: 100%;
   }
+}
+
+/** LIGHT-DARK THEME ===============================> */
+
+.dark-theme-btn {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: #fff;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.dark-theme-btn img {
+  display: block;
+  max-height: 90%;
+}
+
+.invert {
+  filter: invert(100%);
+  transition: all 300ms ease;
+}
+
+.light-dark {
+  background-color: #1e2732;
+  color: #fafafa;
+}
+
+.text-dark-mode {
+  color: #fafafa;
+}
+
+.h2-dark-light {
+  color: #fafafa;
+  transition: all 300ms ease;
+}
+
+.nav-bar-dark-light {
+  background-color: #15202b;
+  transition: all 300ms ease;
+}
+
+.after-text-dark-mode {
+  color: #fafafa;
 }

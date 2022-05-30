@@ -81,6 +81,7 @@ body {
 
 .nav-bar-based-on {
   display: none;
+  cursor: default;
 }
 
 /** MAIN ========================================> */
@@ -102,6 +103,7 @@ body {
 h1 {
   font-size: 2rem;
   text-transform: uppercase;
+  user-select: none;
 }
 
 main {
@@ -326,6 +328,7 @@ main {
     font-style: italic;
     color: gray;
     margin-top: 2rem;
+    user-select: none;
   }
 
   .nav-bar-based-on a {
