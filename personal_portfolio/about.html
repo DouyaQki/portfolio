@@ -24,11 +24,11 @@
   <meta property="og:locale" content="en" />
   <meta property="og:url" content="" />
   <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="dark_mode.css">
   <title>José Luis Villarreal</title>
 </head>
 
 <body>
-
   <header class="nav-bar">
     <div class="logo-links-and-based-on-box">
       <figure class="nav-bar-logo">
@@ -36,24 +36,25 @@
       </figure>
 
       <nav class="nav-bar-links">
-        <a href="index.html" class="home">
-          <img src="assets/icons/home.png" alt="home" class="nav-bar-icons">
+        <a href="index.html" class="home after-text">
+          <img src="assets/icons/home.png" alt="home">
         </a>
 
-        <a href="about.html" class="about">
-          <img src="assets/icons/about.png" alt="about" class="nav-bar-icons">
+        <a href="about.html" class="about after-text">
+          <img src="assets/icons/about.png" alt="about">
         </a>
 
-        <a href="projects.html" class="projects">
-          <img src="assets/icons/projects.png" alt="projects" class="nav-bar-icons">
+        <a href="projects.html" class="projects after-text">
+          <img src="assets/icons/projects.png" alt="projects">
         </a>
 
-        <a href="mailto:villarrealjoseluis23@gmail.com" class="contact">
-          <img src="assets/icons/contact.png" alt="contact" class="nav-bar-icons">
+        <a href="mailto:villarrealjoseluis23@gmail.com" class="contact after-text">
+          <img src="assets/icons/contact.png" alt="contact">
         </a>
       </nav>
 
-      <p class="nav-bar-based-on">Design based on<br> <a href="https://www.nico-alvarez.eu/" target="_blank" rel="noopener noreferrer">Nicolas Alvarez</a>'s work</p>
+      <p class="nav-bar-based-on">Design based on<br> <a href="https://www.nico-alvarez.eu/" target="_blank"
+          rel="noopener noreferrer">Nicolas Alvarez</a>'s work</p>
     </div>
   </header>
 
@@ -98,24 +99,34 @@
         <div class="row-6">
           <p>19.Oct.1989</p>
         </div>
+
         <div class="row-7">
           <p>Córdoba, Argentina</p>
         </div>
+
         <div class="row-8">
           <a href="" class="table-links">Responsive Web Design</a>
           <a href="" class="table-links">JavaScript Algorithms <br>and Data Structures</a>
         </div>
-        <div class="row-9">
+
+        <div class="row-9 col-2">
           <p>English</p>
           <a href="" class="table-links">German (Duolingo)</a>
           <a href="" class="table-links">Japanese (reading)</a>
         </div>
-        <div class="row-10">
-          <a href="mailto:villarrealjoseluis23@gmail.com" class="table-links"><abbr title="villarrealjoseluis23@gmail.com">villarrealjoseluis23@gmail.com</abbr> </a>
+
+        <div class="row-10 col-2">
+          <a href="mailto:villarrealjoseluis23@gmail.com" class="table-links">villarrealjoseluis23@gmail.com</a>
         </div>
       </article>
     </article>
   </main>
+
+  <div class="dark-theme-btn light-dark">
+    <img src="assets/dark_mode/dark.png" alt="dark mode" class="dark-mode-icons">
+  </div>
+
+  <script src="dark_mode.js"></script>
 </body>
 
 </html>

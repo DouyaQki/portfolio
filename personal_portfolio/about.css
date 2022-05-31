@@ -138,7 +138,7 @@ main {
 .about-me-text {
   font-style: italic;
   line-height: 2;
-  color: gray;
+  color: #808080;
 }
 
 /** GRID TABLE ========================================> */
@@ -211,6 +211,8 @@ main {
 .row-9,
 .row-10 {
   color: gray;
+  font-style: italic;
+  font-weight: 600;
 }
 
 .row-8 a,
@@ -219,12 +221,6 @@ main {
   display: block;
   transition: all 300ms ease;
   color: gray;
-}
-
-.row-10 a abbr {
-  width: 17ch;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .table-links:hover {
@@ -286,6 +282,12 @@ main {
   .nav-bar-links a {
     display: flex;
     align-items: center;
+  }
+
+  .after-text {
+    color: #000;
+    font-weight: 400;
+    transition: all 300ms ease;
   }
 
   .home,
