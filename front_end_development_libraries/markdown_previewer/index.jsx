@@ -60,7 +60,7 @@ And here. | Okay. | I think we get it.
         name='editor'
         value={textValue}
         onChange={handleChange}
-        cols="22"
+        cols='22'
         id='editor'
       ></textarea>
       <Previewer markdown={textValue} />
