@@ -36,23 +36,34 @@ a {
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #222;
   color: #fff;
-  height: 90vh;
+  height: 100vh;
   overflow-y: hidden;
 }
 
 #main-box {
   display: grid;
-  grid-template-rows: 50vh 50vh;
+  gap: .5rem;
+  grid-template-rows: 40vh 50vh;
   height: 100%;
+  padding: 0.5rem;
 }
 
 #editor {
-  padding: 1rem;
-  border: none;
+  width: 90vw;
+  font-size: 1rem;
   display: block;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.2rem;
   resize: none;
+  cursor: default;
+  border: thin solid gray;
+  border-radius: 0.2rem;
 }
 
 #editor:focus {
@@ -60,13 +71,15 @@ body {
 }
 
 #preview {
-  padding: 1rem;
+  width: 90vw;
+  padding: 0.5rem;
   overflow-wrap: break-word;
   overflow-y: scroll;
+  border: thin solid gray;
+  border-radius: 0.2rem;
 }
 
 #preview > * {
-  margin: 1rem 0;
   max-width: inherit;
 }
 
@@ -97,7 +110,16 @@ th {
 
 @media (min-width: 700px) {
   #main-box {
-    grid-template-columns: 50vw 50vw;
-    grid-template-rows: 100vh;
+    gap: .5rem;
+    grid-template-rows: 1fr;
+    grid-template-columns: 45vw 45vw;
+    grid-template-rows: 90vh;
+  }
+
+  #preview {
+    overflow-y: scroll;
+  }
+  #editor, #preview {
+    width: 45vw;
   }
 }
