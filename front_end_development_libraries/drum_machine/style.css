@@ -1,0 +1,97 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222222;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+#drum-machine {
+  background-color: #393939;
+  width: 20rem;
+  height: 30rem;
+  border: thin solid #808080;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0.5rem #000;
+}
+
+.drum-title {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  background-color: #808080;
+  padding: 0.5rem;
+}
+
+img {
+  display: block;
+  height: 1.5rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+#display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  height: 100%;
+}
+
+button {
+  border: none;
+  width: 5rem;
+  height: 5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: #3366cc;
+  border: thin solid #172f5e91;
+  transition: all 200ms ease;
+}
+
+button:hover {
+  background-color: #3a5b9e;
+}
+
+button:active {
+  background-color: #274f9e;
+  border: 0.3rem solid #393939;
+}
+
+button:focus {
+  outline: none;
+}
+
+.button-active {
+  animation-name: press-button;
+  animation-duration: 100ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes press-button {
+  from {
+    background-color: #274f9e;
+    border: 1rem solid #393939;
+  }
+
+  to {
+    background-color: #3366cc;
+    border: thin solid #172f5e91;
+  }
+}
