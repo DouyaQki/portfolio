@@ -15,15 +15,14 @@ class App extends React.Component {
   keyboardPressed(e) {
     const keyboard = {
       Q: 81,
-      // Q: 'Q',
-      W: 'W',
-      E: 'E',
-      A: 'A',
-      S: 'S',
-      D: 'D',
-      Z: 'Z',
-      X: 'X',
-      C: 'C',
+      W: 87,
+      E: 69,
+      A: 65,
+      S: 83,
+      D: 68,
+      Z: 90,
+      X: 88,
+      C: 67,
     }
 
     const keyboardPressed = e.key.toUpperCase()
@@ -36,17 +35,21 @@ class App extends React.Component {
           console.clear()
         })
     }
+
     const btnAnimation = () => {
-      document.getElementById('audio-q').classList.add('button-active')
+      document
+        .getElementById(`audio-${e.key.toLowerCase()}`)
+        .classList.add('button-active')
+
       setTimeout(() => {
-        document.getElementById('audio-q').classList.remove('button-active')
+        document
+          .getElementById(`audio-${e.key.toLowerCase()}`)
+          .classList.remove('button-active')
       }, 100)
     }
 
-    switch (keyboardPressed) {
-      case 'Q':
-        btnAnimation()
-        break
+    if (e.keyCode === keyboard[keyboardPressed]) {
+      btnAnimation()
     }
   }
 

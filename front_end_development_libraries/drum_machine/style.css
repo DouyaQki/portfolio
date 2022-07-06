@@ -7,6 +7,7 @@ html {
 *::after {
   box-sizing: inherit;
   margin: 0;
+  user-select: none;
 }
 
 body {
@@ -60,7 +61,7 @@ button {
   height: 5rem;
   color: #fff;
   font-size: 1.5rem;
-  background-color: #3366cc;
+  background-color: #222222;
   border: thin solid #172f5e91;
   transition: all 200ms ease;
 }
