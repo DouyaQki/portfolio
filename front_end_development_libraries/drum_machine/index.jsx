@@ -28,10 +28,11 @@ class App extends React.Component {
     const keyboardPressed = e.key.toUpperCase()
 
     if (keyboard[keyboardPressed] === e.keyCode) {
-      document
-        .getElementById(keyboardPressed)
-        .play()
-        .catch(() => console.clear())
+      const $btn = document.getElementById(keyboardPressed)
+
+      $btn.currentTime = 0
+
+      $btn.play().catch(() => console.clear())
     }
 
     const btnAnimation = () => {
@@ -61,9 +62,9 @@ class App extends React.Component {
     $drumText.innerText = $drumData.innerText
 
     const $btnSound = document.getElementById(e.target.innerText)
-    $btnSound
-      .play()
-      .catch(() => console.clear())
+    $btnSound.currentTime = 0
+
+    $btnSound.play().catch(() => console.clear())
   }
 
   render() {
