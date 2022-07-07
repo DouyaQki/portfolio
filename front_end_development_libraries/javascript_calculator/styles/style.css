@@ -1,0 +1,175 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+button {
+  background-color: #0e0e0e;
+  color: #fff;
+  font-size: 1.2rem;
+  border: thin solid #222;
+  transition: all 300ms ease;
+}
+
+button:hover {
+  background-color: rgba(77, 77, 77, 0.4784313725);
+}
+
+button:active {
+  background-color: #cc9042;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 20rem;
+  border: thin solid gray;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.5058823529);
+  background-color: #202029;
+  display: grid;
+  align-items: start;
+  align-content: flex-start;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(7, auto);
+  grid-template-areas: "header-title header-title header-title header-title" "visor-display visor-display visor-display visor-display" "btn10 btn11 btn12 btn13" "btn7 btn8 btn9 btnclear" "btn4 btn5 btn6 btnclear" "btn1 btn2 btn3 btn14" "btn0 btn0 btndot btn14";
+}
+
+.btn-0 {
+  grid-area: btn0;
+  height: 4rem;
+}
+
+.btn-1 {
+  grid-area: btn1;
+  height: 4rem;
+}
+
+.btn-2 {
+  grid-area: btn2;
+  height: 4rem;
+}
+
+.btn-3 {
+  grid-area: btn3;
+  height: 4rem;
+}
+
+.btn-4 {
+  grid-area: btn4;
+  height: 4rem;
+}
+
+.btn-5 {
+  grid-area: btn5;
+  height: 4rem;
+}
+
+.btn-6 {
+  grid-area: btn6;
+  height: 4rem;
+}
+
+.btn-7 {
+  grid-area: btn7;
+  height: 4rem;
+}
+
+.btn-8 {
+  grid-area: btn8;
+  height: 4rem;
+}
+
+.btn-9 {
+  grid-area: btn9;
+  height: 4rem;
+}
+
+.btn-10 {
+  grid-area: btn10;
+  height: 4rem;
+}
+
+.btn-11 {
+  grid-area: btn11;
+  height: 4rem;
+}
+
+.btn-12 {
+  grid-area: btn12;
+  height: 4rem;
+}
+
+.btn-13 {
+  grid-area: btn13;
+  height: 4rem;
+}
+
+.btn-14 {
+  grid-area: btn14;
+  height: 4rem;
+}
+
+.btn-clear {
+  grid-area: btnclear;
+  height: 100%;
+}
+
+.btn-dot {
+  grid-area: btndot;
+  height: 100%;
+}
+
+/* Botón  decimal */
+.btn-14 {
+  height: 100%;
+  background-color: #134369;
+  transition: all 300ms ease;
+}
+
+.btn-14:hover {
+  background-color: #0672c7;
+}
+
+.btn-14:active {
+  background-color: #cc9042;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  font-size: 0.6rem;
+  gap: 0.5rem;
+  grid-area: header-title;
+  background-color: #1b1b1b;
+  border-bottom: thin solid gray;
+}
+
+img {
+  display: block;
+  height: 2rem;
+}
+
+.visor {
+  grid-area: visor-display;
+  font-family: "Roboto Mono", monospace;
+  text-align: right;
+  align-self: center;
+  padding: 0.5rem 1rem 0.5rem 0;
+  background-color: #111111;
+}/*# sourceMappingURL=style.css.map */
