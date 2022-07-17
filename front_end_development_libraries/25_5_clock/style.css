@@ -71,7 +71,7 @@ button {
   text-shadow: 0 0 1rem #fff, 0 0 4rem #262d3e;
   color: #ffffff;
   font-size: 5rem;
-  transition: all 300ms ease;
+  transition: all 1s ease;
 }
 
 .timer-buttons-box {

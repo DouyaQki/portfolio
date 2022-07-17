@@ -92,6 +92,7 @@ const App = () => {
 
   React.useEffect(() => {
     let timeLeftColor = document.getElementById('time-left')
+    let breakLengthFinish = document.getElementById('time-left')
     let timeLeftColorSplit = timeLeftColor.innerText.split(':')
 
     if (timeLeftColorSplit[0] === '00') {
@@ -102,6 +103,10 @@ const App = () => {
     if (timeLeftColorSplit[0] !== '00') {
       timeLeftColor.style.color = '#fff'
       timeLeftColor.style.textShadow = '0 0 1rem #fff, 0 0 4rem #262d3e'
+    }
+
+    if(timeLeftColorSplit[0] === '00' && timeLeftColorSplit[1] === '00' && breakLength === 1) {
+      handleReset()
     }
 
     clock()
