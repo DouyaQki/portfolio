@@ -5,6 +5,8 @@ const App = () => {
   const [timingType, setTimingType] = React.useState('SESSION')
   const [timeLeft, setTimeLeft] = React.useState(1500)
 
+  let timeLeftColor = document.getElementById('time-left')
+
   const timeout = setTimeout(() => {
     if (timeLeft && play) {
       setTimeLeft(timeLeft - 1)
@@ -89,6 +91,19 @@ const App = () => {
   }
 
   React.useEffect(() => {
+    let timeLeftColor = document.getElementById('time-left')
+    let timeLeftColorSplit = timeLeftColor.innerText.split(':')
+
+    if (timeLeftColorSplit[0] === '00') {
+      timeLeftColor.style.color = '#cc3333'
+      timeLeftColor.style.textShadow = '0 0 1rem #cc3333, 0 0 4rem #262d3e'
+    }
+
+    if (timeLeftColorSplit[0] !== '00') {
+      timeLeftColor.style.color = '#fff'
+      timeLeftColor.style.textShadow = '0 0 1rem #fff, 0 0 4rem #262d3e'
+    }
+
     clock()
   }, [play, timeLeft, timeout])
 
@@ -149,7 +164,7 @@ const App = () => {
 
         <div className='timer-buttons-box'>
           <button onClick={handlePlay} id='start_stop'>
-          ⏵⏸
+            ⏵⏸
           </button>
 
           <button onClick={handleReset} id='reset'>
