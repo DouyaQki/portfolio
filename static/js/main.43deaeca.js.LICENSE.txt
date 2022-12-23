@@ -37,3 +37,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+
+//! añadir minutos de la longitud, cambiar a sesión/break
+
+//! esta parte tiene que añadir 1 seg para hacer sonar la alarma,
