@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/portfolio/front_end_development_libraries/random_quote_machine/static/css/main.c586044d.css",
+    "main.js": "/portfolio/front_end_development_libraries/random_quote_machine/static/js/main.355bad48.js",
+    "static/media/sf_title.jpg": "/portfolio/front_end_development_libraries/random_quote_machine/static/media/sf_title.7a309eb550c714cd79a6.jpg",
+    "static/media/twitter.png": "/portfolio/front_end_development_libraries/random_quote_machine/static/media/twitter.5683fc3afadbdbedcf84.png",
+    "static/media/dhalsim.png": "/portfolio/front_end_development_libraries/random_quote_machine/static/media/dhalsim.d67dd27710c474e7c631.png",
+    "static/media/zangief.png": "/portfolio/front_end_development_libraries/random_quote_machine/static/media/zangief.eb233379068a0cc3a946.png",
+    "index.html": "/portfolio/front_end_development_libraries/random_quote_machine/index.html",
+    "main.c586044d.css.map": "/portfolio/front_end_development_libraries/random_quote_machine/static/css/main.c586044d.css.map",
+    "main.355bad48.js.map": "/portfolio/front_end_development_libraries/random_quote_machine/static/js/main.355bad48.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c586044d.css",
+    "static/js/main.355bad48.js"
+  ]
+}
