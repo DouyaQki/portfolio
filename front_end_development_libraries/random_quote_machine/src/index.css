@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  background-color: #15202b;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

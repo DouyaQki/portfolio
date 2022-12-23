@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Formulario de contacto." />
+  <meta name="keywords" content="Freecodecamp, formulario, survey form">
+  <meta name="author" content="José Luis Villarreal">
+  <meta name="copyright" content="José Luis Villarreal.">
+  <meta name="theme-color" content="#fafafa">
+  <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="favicon.ico" />
+  <meta name="twitter:card" content="Formulario de contacto." />
+  <meta name="twitter:creator" content="@qkijose" />
+  <meta property="og:title" content="Formulario" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Formulario de contacto." />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:url" content="https://douyaqki.github.io/portfolio/responsive_web_design/survey_form/index.html" />
+  <link rel="stylesheet" href="style.css">
+  <title>Formulario</title>
+</head>
+
+<body>
+  <form id="survey-form">
+    <h1 id="title" tabindex="1">CONTACTO</h1>
+
+    <p id="description" tabindex="2">Llene el siguiente formulario.</p>
+
+    <label for="dropdown" class="block-label inquiry" tabindex="3" accesskey="1">Tipo de consulta *</label>
+    <select name="inquiry" id="dropdown" class="form-input" title="Ingrese una opción." tabindex="4" required>
+      <option value="" selected="selected">Elija una opción</option>
+      <option value="1">Ventas</option>
+      <option value="2">Sugerencia</option>
+      <option value="3">Reclamo</option>
+      <option value="4">otros</option>
+    </select>
+
+    <label id="name-label" class="block-label" for="name" tabindex="5">Nombre *
+      <input type="text" id="name" class="form-input" name="name" value="" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+        title="Ingrese un nombre válido." placeholder="Nombre" accesskey="2" tabindex="6" required>
+    </label>
+
+    <label id="email-label" class="block-label" for="email" tabindex="7">Email *
+      <input type="email" id="email" class="form-input" name="email" value=""
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,}$" title="Ingrese un email válido."
+        placeholder="ejemplo@email.com" accesskey="3" tabindex="8" required>
+    </label>
+
+    <label id="number-label" class="block-label" tabindex="9">Edad
+      <input type="number" id="number" class="form-input" name="age" placeholder="14" min="14" max="80" tabindex="10" accesskey="4">
+    </label>
+
+    <section class="radio-and-check-section">
+      <section class="radio-inputs block-label">
+        <label tabindex="11">
+          <input type="radio" name="category" value="1" accesskey="5" checked> Particular
+        </label>
+
+        <label tabindex="12">
+          <input type="radio" name="category" value="2"> Empresa
+        </label>
+      </section>
+
+      <section class="checkbox-inputs block-label">
+        <label tabindex="13">
+          <input type="checkbox" name="service" value="1"> Recibir ofertas
+        </label>
+
+        <label tabindex="14">
+          <input type="checkbox" name="service" value="2"> Recibir novedades
+        </label>
+      </section>
+    </section>
+
+    <textarea name="message" maxlength="400" class="form-text-area" value=""
+      placeholder="Consulta (400 caracteres máximo)." tabindex="15" accesskey="6"></textarea>
+
+    <button id="submit" tabindex="16" accesskey="7">ENVIAR</button>
+  </form>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

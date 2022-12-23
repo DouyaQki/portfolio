@@ -1,0 +1,513 @@
+:root {
+  --link-color: #b62396;
+}
+
+html {
+  scrollbar-width: auto;
+  scrollbar-color: #aaaaaa #181818;
+}
+
+html::-webkit-scrollbar {
+  width: 16px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #181818;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #aaaaaa;
+  border-radius: 10px;
+  border: 3px solid #181818;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #aaaaaa7a;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  background-image: url(assets/jojo_bk.png);
+  background-size: 6rem auto;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+  color: #fff;
+  background-attachment: fixed;
+}
+
+a {
+  color: var(--link-color);
+  font-weight: 600;
+}
+
+img {
+  user-select: none;
+}
+
+/*
+=====================
+*===== HEADER
+=====================
+*/
+
+header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 1.2rem;
+  background-color: #15202bbf;
+  border-bottom: thin solid var(--link-color);
+}
+
+.header-nav-links,
+.header-nav-links,
+.header-nav-links {
+  font-weight: 600;
+  color: #fff;
+  transition: color 300ms ease;
+}
+
+.header-nav-links:hover,
+.header-nav-links:hover,
+.header-nav-links:hover {
+  color: var(--link-color);
+  transition: color 300ms ease;
+}
+
+.nav-gap {
+  padding: 0 1rem;
+  user-select: none;
+}
+
+/*
+* **********************
+* PARTE A | PRESENTACIÓN (ARAKI POSANDO COOL)
+* **********************
+*/
+
+.jojo-presentation {
+  min-height: 90vh;
+}
+
+.araki-posing {
+  width: 14rem;
+  height: 14rem;
+  margin: 0 auto;
+
+  background-image: url(assets/araki_pose_0.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 150%;
+  background-color: #222222;
+
+  border-radius: 50%;
+  transition: background-size 500ms ease;
+
+  animation-name: araki-posing;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 500ms;
+}
+
+.araki-posing:hover {
+  background-size: 160%;
+  transition: all 500ms ease;
+}
+
+#title {
+  font-size: 2rem;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(-15%);
+  animation-name: jojo-logo;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.tributo-a-hirohiko-araki {
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(-10%);
+  animation-name: jojo-logo;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.mask {
+  display: block;
+  width: auto;
+  filter: invert(100%);
+  margin: 1rem auto 0 auto;
+
+  opacity: 0;
+  transform: translateY(-10%);
+
+  animation-name: jojo-logo;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+
+/*
+* **********************
+* PARTE B | Hirohiko Araki ( 荒木 飛呂彦 )
+* **********************
+*/
+
+.story {
+  background-image: url(assets/footer_bk.png);
+  background-attachment: fixed;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  align-items: center;
+  height: auto;
+}
+
+/*
+* **********************
+* A) FONDOS DE CADA TARGETA
+* B) FRAMES (IMÁGENES CIRCULARES)
+* C) WIKI (TEXTO)
+* **********************
+*/
+
+.section-card-a {
+  background-color: #1a1a1a;
+}
+.section-card-b {
+  background-color: #212836;
+}
+.section-card-c {
+  background-color: #191d29;
+}
+
+.araki-frame,
+.jojo-frame,
+.araki-nowadays {
+  width: 12rem;
+  height: 12rem;
+  margin-top: 1rem;
+  align-self: flex-end;
+  background-image: url(assets/araki.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  background-color: #222222;
+  border-radius: 50%;
+  transition: all 1s ease;
+}
+
+.araki-frame:hover {
+  background-size: 110%;
+  transition: all 1s ease;
+}
+
+.araki-wiki,
+.jojo-wiki,
+.araki-nowadays-wiki {
+  margin: 0 0 1rem 0;
+  transform: scale(1);
+  transition: all 500ms ease;
+}
+
+/*
+* **********************
+* SUBTÍTULO DE CADA TARGETA
+* Y SEPARADORES
+* **********************
+*/
+
+h3 {
+  color: #ff01af;
+  text-align: center;
+  margin: 0;
+}
+
+hr {
+  width: 20rem;
+  margin: 1rem auto;
+  border-color: var(--link-color);
+  background-color: var(--link-color);
+}
+
+.story-p {
+  width: 20rem;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+/*
+* **********************
+* SEPARADORES CON IMÁGENES
+* **********************
+*/
+
+.hr,
+.hr-2 {
+  background-image: url(assets/araki_hr.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 20%;
+  min-height: 50vh;
+  background-color: #212836;
+}
+
+.hr-2 {
+  background-image: url(assets/araki_nowadays.jpg);
+  background-attachment: scroll;
+  background-size: 180%;
+  background-position: 50% 50%;
+  background-position: center center;
+}
+
+.all-jojos {
+  width: 30rem;
+  min-width: 18rem;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+#img-caption {
+  padding-bottom: 1rem;
+  text-align: center;
+  transition: all 500ms ease;
+}
+
+/*
+* **********************
+* PARTE C | Araki y su éxito con JoJo
+* **********************
+*/
+
+.jojo-frame {
+  background-image: url(assets/jojo_arc_1.jpg);
+  background-position: top;
+  background-size: 110%;
+  background-color: #222222;
+}
+
+.jojo-frame:hover {
+  background-size: 110%;
+  transform: rotate(10deg) scale(1);
+  transition: all 1s ease;
+}
+
+/*
+* **********************
+* PARTE D | Araki en la actualidad
+* **********************
+*/
+
+.araki-nowadays {
+  background-image: url(assets/araki_nowadays.jpg);
+  background-position: 30% 0%;
+  background-size: 190%;
+}
+
+.araki-nowadays:hover {
+  background-size: 180%;
+  background-position: 40% 0%;
+  transition: all 1s ease;
+}
+
+/*
+* **********************
+* IMAGEN DE TODOS LOS JOESTAR
+* **********************
+*/
+
+#img-div {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+#image {
+  max-width: 100%;
+  max-height: 100vh;
+  display: block;
+  margin: 0 auto;
+}
+
+/*
+* **********************
+* FOOTER
+* **********************
+*/
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(assets/footer_bk.png);
+  background-attachment: fixed;
+  width: 100%;
+  height: 7rem;
+  background-color: #181818;
+}
+
+footer a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+  color: #fff;
+}
+
+footer a:hover {
+  background-color: #b623964d;
+}
+
+footer a img {
+  position: relative;
+  bottom: 0;
+  height: 2rem;  
+  transition: bottom 300ms ease;
+}
+
+footer a img:hover {
+  bottom: 0.5rem;
+  transition: bottom 300ms ease;
+}
+
+@keyframes jojo-logo {
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes araki-posing {
+  100% {
+    background-position: top left;
+    transform: rotate(10deg);
+  }
+}
+
+.go-up img {
+  z-index: 800;
+  position: fixed;
+  bottom: 6rem;
+  right: 2rem;
+  transform: scale(1.2);
+}
+
+@media (min-width: 576px) {
+  .story {
+    margin-bottom: 0;
+  }
+  .jojo-frame {
+    align-self: center;
+    background-color: var(--link-color);
+  }
+
+  .araki-wiki,
+  .jojo-wiki,
+  .araki-nowadays-wiki {
+    font-size: 1.2rem;
+  }
+  .all-jojos {
+    width: 40rem;
+    min-width: 18rem;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  footer {
+    /* gap: 1rem; */
+  }
+
+  .twitter {
+    justify-content: flex-end;
+  }
+  .youtube {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 768px) {
+  #img-caption {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+
+  .story {
+    gap: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: auto;
+    align-items: auto;
+    height: 100vh;
+  }
+
+  .araki-frame,
+  .jojo-frame,
+  .araki-nowadays {
+    justify-self: center;
+    align-self: center;
+    transform: scale(1.4);
+  }
+
+  .jojo-frame:hover {
+    transform: scale(1.4) rotate(20deg);
+  }
+
+  .araki-wiki,
+  .jojo-wiki,
+  .araki-nowadays-wiki {
+    justify-self: start;
+    font-size: 1.05rem;
+  }
+
+  .hr-2 {
+    background-size: 100%;
+    background-position: center center;
+  }
+}
+
+@media (min-width: 992px) {
+  .araki-frame,
+  .jojo-frame,
+  .araki-nowadays {
+    transform: scale(1.4);
+  }
+
+  .araki-wiki,
+  .jojo-wiki,
+  .araki-nowadays-wiki {
+    transform: scale(1.2);
+    transition: all 500ms ease;
+  }
+}

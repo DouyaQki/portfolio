@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Technical documentation about NES (Nintendo Entertainment System)." />
+  <meta name="keywords" content="Freecodecamp, technical documentation, nes">
+  <meta name="author" content="José Luis Villarreal">
+  <meta name="copyright" content="José Luis Villarreal.">
+  <meta name="theme-color" content="#222222">
+  <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="favicon.ico" />
+  <meta name="twitter:card" content="Technical documentation about NES (Nintendo Entertainment System)." />
+  <meta name="twitter:creator" content="@qkijose" />
+  <meta property="og:title" content="Technical documentation" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Technical documentation about NES (Nintendo Entertainment System)." />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:url"
+    content="https://douyaqki.github.io/portfolio/responsive_web_design/technical_documentation/index.html" />
+  <meta property="og:image" content="https://douyaqki.github.io/portfolio/responsive_web_design/technical_documentation/assets/motherboard.png" />
+  <link rel="stylesheet" href="style.css">
+  <title>Technical documentation</title>
+</head>
+
+<body>
+  <nav id="navbar">
+    <div class="close-menu">
+      <a href="#">X</a>
+    </div>
+    <header class="navbar-header">
+      <a href="#nes-guide">
+        <h2>NES GUIDE</h2>
+      </a>
+    </header>
+
+    <a href="#CPU" class="nav-link">CPU</a>
+    <a href="#PPU_MEMORY_MAP" class="nav-link">PPU MEMORY MAP</a>
+    <a href="#COLOR_PALETTE" class="nav-link">COLOR PALETTE</a>
+    <a href="#DIRECT_MEMORY_ACCESS" class="nav-link">DIRECT MEMORY ACCESS</a>
+    <a href="#SPRITES_ON_SCREEN" class="nav-link">SPRITES ON SCREEN</a>
+  </nav>
+
+  <a href="#navbar" class="open-menu">
+    <img src="assets/menu.png" alt="menu">
+  </a>
+
+  <h1 id="nes-guide" tabindex="1">NES | TECHNICAL DOCUMENTATION</h1>
+
+  <main id="main-doc">
+    <div class="nes-mother-board-window">
+      <div class="hardware">
+        <h2 tabindex="2">HARDWARE</h2>
+      </div>
+
+      <figure class="hardware-img">
+        <a href="assets/motherboard.png" target="_blank" rel="noopener">
+          <img tabindex="3" src="assets/motherboard.png" alt="NES motherboard">
+        </a>
+      </figure>
+    </div>
+
+    <section class="main-section" id="CPU">
+      <header>
+        <h2 class="general-text-color" accesskey="1" tabindex="4">CPU</h2>
+      </header>
+
+      <ul>
+        <li tabindex="5">CPU: Central Processing Unit</li>
+      </ul>
+
+      <p tabindex="6">Hiroshi Yamauchi’s instructions to design a console which would be cheaper than the competition
+        resulted in
+        Nintendo deciding to use an outdated Central Processing Unit (CPU). Although a 16-bit processor would have coped
+        with ease, to keep the price low they decided to use a variant of the 8-bit 6502 processor, developed by MOS
+        technology in 1975. The chip would be sufficient to run the programs but would be unable to generate the
+        graphics required so the company decided to use a second chip as a dedicated Picture Processing Unit (PPU),
+        responsible for calculating and displaying the graphics. Figure 1-4 shows the top of the motherboard with the
+        CPU and PPU indicated.</p>
+      <p tabindex="7">Ricoh produced an NMOS processor based on the 6502, the 2A03. The chip differed from a standard
+        6502 in that it
+        had the ability to handle sound, serving as pAPU (pseudo-Audio Processing Unit) as well as CPU, and that it
+        lacked a Binary Coded Decimal (BCD) mode which allowed representing each digit using 4 bits. For the purposes of
+        programming, the 2A03 uses the same instruction set as the standard 6502 which is shown in figure 2-1.</p>
+
+      <code
+        tabindex="8">The 6502 is a little endian processor which means that addresses are stored in memory least significant byte first, for example the address $1234 would be stored in memory as $34 at memory location x and $12 at memory location (x + 1).</code>
+    </section>
+
+    <section class="main-section" id="PPU_MEMORY_MAP">
+      <header>
+        <h2 class="general-text-color" accesskey="2" tabindex="9">PPU MEMORY MAP</h2>
+      </header>
+
+      <ul>
+        <li tabindex="10">PPU: Picture Processing Unit</li>
+      </ul>
+
+      <p tabindex="11">The PPU has its own memory, known as VRAM (Video RAM). Like the CPU, the PPU can also address 64
+        KB of memory
+        although it only has 16 KB of physical RAM. The PPU’s memory map is shown in figure 3-1. Again, the left hand
+        map shows a simplified version which is elaborated on by the right hand map. Due to the difference between
+        physical and logical address spaces, any address above $3FFF is wrapped around, making the logical memory
+        locations $4000-$FFFF effectively a mirror of locations $0000-$3FFF.</p>
+      <p tabindex="12">Reading from and writing to PPU memory can be done by using the I/O registers $2006 and $2007 in
+        CPU memory.
+        This is usually done during V-Blank at the end of a frame, as it affects addresses used while drawing the screen
+        and can therefore corrupt what is displayed. However, this effect can be used to produce split screen effects.
+      </p>
+
+      <code
+        tabindex="13">Ricoh also supplied the 2C02 to serve as PPU. The PPU’s registers are mostly located in the I/O registers section of CPU memory at $2000-$2007 and $4014</code>
+    </section>
+
+    <section class="main-section" id="COLOR_PALETTE">
+      <header>
+        <h2 class="general-text-color" accesskey="3" tabindex="14">COLOR PALETTE</h2>
+      </header>
+
+      <p tabindex="15">The NES has a colour palette containing 52 colours although there is actually room for 64.
+        However, not all of
+        these can be displayed at a given time. The NES uses two palettes, each with 16 entries, the image palette
+        ($3F00-$3F0F) and the sprite palette ($3F10-$3F1F). The image palette shows the colours currently available for
+        background tiles.</p>
+      <p tabindex="16">The sprite palette shows the colours currently available for sprites. These palettes do not store
+        the actual
+        colour values but rather the index of the colour in the system palette. Since only 64 unique values are needed,
+        bits 6 and 7 can be ignored.</p>
+
+      <ul>
+        <li tabindex="17">Colours onscreen: 25 out of 52</li>
+      </ul>
+
+      <code
+        tabindex="18">The total number of colours onscreen at any time is therefore 25 out of 52. Both palettes are also mirrored to $3F20-$3FFF. The colour palette is shown in Appendix F.</code>
+    </section>
+
+    <section class="main-section" id="DIRECT_MEMORY_ACCESS">
+      <header>
+        <h2 class="general-text-color" accesskey="4" tabindex="19">DIRECT MEMORY ACCESS</h2>
+      </header>
+
+      <p tabindex="20">When transferring a large amount of data between devices it is inefficient to transfer this
+        through the
+        processor. To transfer data from CPU memory to sprite memory, for example, takes the following steps:</p>
+
+      <ul>
+        <li tabindex="21">Load required SPR-RAM address into CPU.</li>
+        <li tabindex="22">Write required SPR-RAM address to $2003.</li>
+        <li tabindex="23">Load byte into CPU.</li>
+        <li tabindex="24">Write byte to $2004.</li>
+      </ul>
+
+      <p tabindex="25">When filling the contents of sprite memory, this technique would have to be repeated 256 times.
+        Direct Memory
+        Access (DMA) is a technique which allows more efficient copying of data from CPU memory to sprite memory. Using
+        DMA, the whole of sprite memory can be filled by using a single instruction, a write to $4014. The starting
+        address in CPU memory is specified by the operand for the write multiplied by $100. The 256 bytes starting at
+        this address are copied directly into sprite memory without the further involvement of the CPU.</p>
+
+      <code
+        tabindex="26">Using DMA, the whole of sprite memory can be filled by using a single instruction, a write to $4014.</code>
+    </section>
+
+    <section class="main-section" id="SPRITES_ON_SCREEN">
+      <header>
+        <h2 class="general-text-color" accesskey="5" tabindex="27">SPRITES ON SCREEN</h2>
+      </header>
+
+      <p tabindex="28">Sprites are the characters to draw on the screen. Sprites can be either 8x8 pixels or 8x16
+        pixels. Most
+        characters are composed of multiple sprites.</p>
+      <p tabindex="28">The sprite data is stored in the pattern tables while the sprite attributes are stored in
+        SPR-RAM. There are a
+        maximum of 64 sprites, each of which uses four bytes in SPR-RAM. The bytes work as follows:</p>
+
+      <ul>
+        <li tabindex="29">Byte 0 - Stores the y-coordinate of the top left of the sprite minus 1.</li>
+        <li tabindex="30">Byte 1 - Index number of the sprite in the pattern tables.</li>
+        <li tabindex="31">Byte 2 - Stores the attributes of the sprite.</li>
+        <li tabindex="32">Bits 0-1 - Most significant two bits of the colour.</li>
+        <li tabindex="33">Bit 5 - Indicates whether this sprite has priority over the background.</li>
+        <li tabindex="34">Bit 6 - Indicates whether to flip the sprite horizontally.</li>
+        <li tabindex="35">Bit 7 - Indicates whether to flip the sprite vertically.</li>
+      </ul>
+
+      <code
+        tabindex="36">Sprites can be read or written one at a time by first writing the required address to $2003 and then reading or writing $2004. Alternatively the whole of SPR-RAM can be written in one DMA operation by writing to $4014.</code>
+    </section>
+  </main>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
